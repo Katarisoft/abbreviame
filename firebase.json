@@ -23,5 +23,14 @@
 		"destination": "/index.html"
 	    }
 	]
+    },
+    "emulators": {
+	"hosting": {
+	    "host": "65.21.2.248"
+	},
+	"functions":{
+	    "host": "65.21.2.248"
+	}
+	
     }
 }

@@ -10,7 +10,7 @@ const {setCache} = require("./app/cache/set-cache");
 const {TwitterRateLimitException} =
     require("./app/twitter/twitter-rate-limit-exception");
 const allowDomainCors = (request, response) => {
-  response.set("Access-Control-Allow-Origin", "http://localhost:5000");
+  response.set("Access-Control-Allow-Origin", "http://describeme.katarisoft.com");
   response.set("Access-Control-Allow-Headers", "*");
 };
 
@@ -69,8 +69,8 @@ const doTheJob = async (
 
 exports.abbreviameLimited =
     functions.https.onRequest(async (request, response) => {
-	console.log(request.query.username)
-	console.log(request.headers["x-openai-key"])
+      console.log(request.query.username);
+      console.log(request.headers["x-openai-key"]);
       const username = cleanInput(request.query.username.trim());
       const rawApiKey = request.headers["x-openai-key"] ?
           request.headers["x-openai-key"].trim() :
