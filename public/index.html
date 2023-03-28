@@ -110,7 +110,8 @@
       }
 
       function getDescription() {
-        const SERVER = 'https://us-central1-abbreviame.cloudfunctions.net/abbreviameLimited'
+       //const SERVER = 'https://us-central1-abbreviame.cloudfunctions.net/abbreviameLimited'
+	const SERVER = 'http://localhost:5001/describeme-31924/us-central1/abbreviameLimited'
         const username = $('#twitterUsername').val().trim()
         const lang = $('input[name=lang]:checked').val()
 
